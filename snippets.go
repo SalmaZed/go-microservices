@@ -1,4 +1,4 @@
-package main
+package snippets
 
 import (
 	"net/http"
@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// PART 1
 // book represents data about a book.
 type book struct {
 	ID                string  `json:"id"`
@@ -22,6 +23,32 @@ var books = []book{
 	{ID: "3", Title: "The 48 Laws of Power", Author: "Robert Greene", YearOfPublication: 2023, Price: 10.99},
 }
 
+// PART 2
+func main2() {
+
+}
+
+func getBooks() book {
+	return books
+}
+
+func addBook(newBook book) {
+	// Add the new book to the slice.
+	books = append(books, newBook)
+}
+
+func getBookByID(id string) {
+	// Loop through the list of books, looking for
+	// an book whose ID value matches the parameter.
+	for _, book := range books {
+		if book.ID == id {
+			return book
+		}
+	}
+	return nil
+}
+
+// PART 3
 func main() {
 	router := gin.Default()
 	router.GET("/books", getBooks)

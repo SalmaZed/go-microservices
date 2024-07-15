@@ -1,0 +1,41 @@
+Dell in Class – Workshop 1 Flow
+Part 1 
+•	Download the project from GitHub
+•	Open it in VS Code 
+•	Create data
+o	We'll store data in memory. A more typical API would interact with a database.
+o	We’ll declare a Book struct to store book data in memory 
+	Add json tags
+•	Struct tags specify what a field's name should be when the struct's contents are serialized into JSON. Without them, the JSON would use the struct's capitalized field names – a style not as common in JSON.
+•	JSON: is a standard text-based format used for transmitting data in web applications
+Part 2 
+•	Implement 3 functionalities:
+o	List books: for a user who’s browsing the website for e.g. to view the books
+o	Add a new book: for system admin at the bookstore to add the new books to our inventory
+o	Get the details of a specific book: if a user selects a book and wants to see its details
+•	Implement a function that does those 3 actions (business logic)
+o	Get returns the whole list
+o	Get by id returns the book with the same id
+o	Add a book to the books slice
+Part 3
+•	We need to expose these functions as APIs so that they can be accessible by a client, such as a browser bas we will test using Postman
+o	How? We need to modify these functions and turn them into endpoints or APIs. We need a web framework like Gin to help us.
+o	What is Gin? Gin is an HTTP web framework written in Golang. 
+•	Install the gin dependency to be able to import it and use it.
+o	go get github.com/gin-gonic/gin
+•	Create router & server and add routes.
+o	Server listens on this address and serves any incoming requests & routes them to the correct handler function.
+•	Change functions to accept HTTP request and return HTTP response.
+•	Install the gin dependency to be able to import it and use it.
+o	go get github.com/gin-gonic/gin
+
+Part 4: 
+•	Run our package.
+o	go run main.go
+•	Test our APIs using Postman
+
+Next Time:
+1.	Layer our app architecture
+2.	Containerize it 
+3.	Add unit tests
+4.	Bonus: create a branch from the remote repository and publish changes with a Pull Request
