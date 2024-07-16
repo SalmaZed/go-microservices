@@ -1,0 +1,5 @@
+They need to:
+1. delete the go.mod
+2. go mod init dell-in-class
+
+go test -v ./...

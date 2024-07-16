@@ -13,10 +13,23 @@ Part 2
 o	List books: for a user who’s browsing the website for e.g. to view the books
 o	Add a new book: for system admin at the bookstore to add the new books to our inventory
 o	Get the details of a specific book: if a user selects a book and wants to see its details
-•	Implement a function that does those 3 actions (business logic)
+•	Implement 3 functions that do those 3 actions (business logic)
 o	Get returns the whole list
 o	Get by id returns the book with the same id
 o	Add a book to the books slice
+•   Clean Code principles:
+o   Meaningful Names:
+Use descriptive and meaningful names for variables, functions, classes, and modules. 
+Names should reflect the purpose and functionality of the code entity, making it easier for others to understand the code.
+o   Comments and Documentation:
+Use comments where needed (but not very frequent) and focus on writing self-explanatory code. 
+Comments should provide insights into the why, not just the what. Maintain up-to-date documentation for APIs, modules, and complex code sections.
+o   Error Handling:   
+Handle errors explicitly and appropriately. Avoid silent failures or ignoring error conditions. Use meaningful error messages
+o Formatting and Style:
+Follow a consistent code formatting and style guide. Use naming conventions that are commonly accepted in your programming language's community.
+If you are using camelCase for function names, use the same for variable names. Same goes for snake case.
+If an identifier needs to be visible outside the package, its first character should be uppercase. 
 Part 3
 •	We need to expose these functions as APIs so that they can be accessible by a client, such as a browser bas we will test using Postman
 o	How? We need to modify these functions and turn them into endpoints or APIs. We need a web framework like Gin to help us.
@@ -35,7 +48,9 @@ o	go run main.go
 •	Test our APIs using Postman
 
 Next Time:
-1.	Layer our app architecture
+1.	Layer our app architecture -To abide by Single Responsibility Principle (SRP). 
+Apply the SRP, which states that a class or function should have a single responsibility. 
+Splitting code into smaller, focused units makes it easier to understand, test, and maintain.
 2.	Containerize it 
 3.	Add unit tests
 4.	Bonus: create a branch from the remote repository and publish changes with a Pull Request
