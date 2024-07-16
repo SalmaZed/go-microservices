@@ -28,7 +28,7 @@ func main2() {
 
 }
 
-func getBooks() book {
+func listBooks() []book {
 	return books
 }
 
@@ -37,7 +37,7 @@ func addBook(newBook book) {
 	books = append(books, newBook)
 }
 
-func getBookByID(id string) {
+func selectBookByID(id string) book {
 	// Loop through the list of books, looking for
 	// an book whose ID value matches the parameter.
 	for _, book := range books {
@@ -45,7 +45,7 @@ func getBookByID(id string) {
 			return book
 		}
 	}
-	return nil
+	return book{}
 }
 
 // PART 3
